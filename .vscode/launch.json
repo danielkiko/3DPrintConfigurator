@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/start.js",
+            "env": {
+                "FORGE_CLIENT_ID": "zZK6RQkGJjueVA5AdgBSXzwlGrl5pVpx",
+                "FORGE_CLIENT_SECRET": "Wb85e2575ff23490",
+                "FORGE_CALLBACK_URL": "http://localhost:3000/api/forge/callback/oauth"
+            }
+        }
+    ]
+}
+
+// curl -v 'https://developer.api.autodesk.com/authentication/v1/authenticate'-X 'POST' -H 'Content-Type: application/x-www-form-urlencoded' -d 'client_id=zZK6RQkGJjueVA5AdgBSXzwlGrl5pVpx&client_secret=22DicZVC242nUG1s&grant_type=client_credentials&scope=data:read'
+//   
+//   
