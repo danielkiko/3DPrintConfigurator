@@ -8,7 +8,7 @@
             "program": "${workspaceFolder}/start.js",
             "env": {
                 "FORGE_CLIENT_ID": "zZK6RQkGJjueVA5AdgBSXzwlGrl5pVpx",
-                "FORGE_CLIENT_SECRET": "Wb85e2575ff23490",
+                "FORGE_CLIENT_SECRET": "Ddb16ad8946384b0",
                 "FORGE_CALLBACK_URL": "http://localhost:3000/api/forge/callback/oauth"
             }
         }
