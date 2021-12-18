@@ -1,5 +1,6 @@
 var viewer;
 var documentId;
+var coolerid;
 var hotend = true;
 
 launchViewer();
@@ -38,9 +39,12 @@ function launchViewer() {
     }
 
     if (hotend) {
+      coolerid="urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6Y29vbGVycy9FM0RWNmZhbmR1Y3QuU1RM/output/1/E3DV6fanduct.svf";
       documentId = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6aG90ZW5kL0UzRF9WNl9Ib3RlbmRfMV83NW1tX3VuaXZlcnNhbC4xMTVjNTgzNS1iMDUzLTRlY2MtOGVhZC1mNmEzYTQxYmRmYmUuZjNkJTIwdjUuZjNk';
+       
     }
     else {
+      coolerid = "urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6Y29vbGVycy9FM0RfQkxWX21vZGlmaWVkX2Zvcl9Wb2xjYW5vX3YxNS5mM2Q/output/0/1/Design.svf"
       documentId = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6aG90ZW5kL19FM0RfVjZfVk9MQ0FOT19Ib3RlbmRfMV83NW1tLmJmYTdlZTgzLTcxMjktNDgwNy05NDdiLTBlNDJkYzQxNzRiYy5mM2QlMjB2Ni5mM2Q';//'вулкан';
     }
     // console.log(secondnozle);//'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6M2RwcmludGJ1Y2svRW5kZXIlMjAzJTIwJTIwZW4lMjAzZC5mM2QlMjB2MS5mM2Q';
@@ -50,27 +54,7 @@ function launchViewer() {
     Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
     viewer2 = new Autodesk.Viewing.GuiViewer3D(document.getElementById('forgeViewer2'), { extensions: ['Autodesk.DocumentBrowser'] });
     viewer2.start();
-    viewer2.loadModel("urn:adsk.viewing:fs.file:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6Y29vbGVycy9FM0RfQkxWX21vZGlmaWVkX2Zvcl9Wb2xjYW5vX3YxNS5mM2Q/output/0/1/Design.svf");
-  });
-  Autodesk.Viewing.Initializer(options2, () => {
-    var someStr = location.search.split("hotend=");
-    
-    if(someStr.length==2 && someStr[1]=="false")
-    {
-      hotend=false;
-    }
-
-    if (hotend) {
-      documentId = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6aG90ZW5kL0UzRF9WNl9Ib3RlbmRfMV83NW1tX3VuaXZlcnNhbC4xMTVjNTgzNS1iMDUzLTRlY2MtOGVhZC1mNmEzYTQxYmRmYmUuZjNkJTIwdjUuZjNk';
-    }
-    else {
-      documentId = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6aG90ZW5kL19FM0RfVjZfVk9MQ0FOT19Ib3RlbmRfMV83NW1tLmJmYTdlZTgzLTcxMjktNDgwNy05NDdiLTBlNDJkYzQxNzRiYy5mM2QlMjB2Ni5mM2Q';//'вулкан';
-    }
-    // console.log(secondnozle);//'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6M2RwcmludGJ1Y2svRW5kZXIlMjAzJTIwJTIwZW4lMjAzZC5mM2QlMjB2MS5mM2Q';
-    viewer2 = new Autodesk.Viewing.GuiViewer3D(document.getElementById('forgeViewer2'), { extensions: ['Autodesk.DocumentBrowser'] });
-    viewer2.start();
-    Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
-    
+    viewer2.loadModel(coolerid);
   });
 }
 
