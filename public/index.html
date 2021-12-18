@@ -1,88 +1,48 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <title>View Models - Autodesk Forge</title>
-  <meta charset="utf-8" />
-  <link rel="shortcut icon" href="https://github.com/Autodesk-Forge/learn.forge.viewmodels/raw/master/img/favicon.ico">
-  <!-- Common packages: jQuery, Bootstrap, jsTree -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.7/jstree.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- Autodesk Forge Viewer files -->
-  <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css"
-    type="text/css">
-
-  <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
-  <!-- this project files -->
-  <link href="css/main.css" rel="stylesheet" />
-  <script src="js/ForgeViewer.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофигуратор хот-эндов</title>
+    <link rel="stylesheet"  href="css/home-page.css">
+    <script src="js/ForgeViewer.js"></script>
 </head>
-
 <body>
-  <div class="container">
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Материал сопла:</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>E3dv6 Латунь</option>
-        <option>E3dv6 Никелированная медь</option>
-        <option>E3dv6 Закалённая сталь</option>
-        <option>MK8 Латунь</option>
-        <option>MK8 Латунь с рубиновой вставкой</option>                 
-      </select>
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Example select</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Example select</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          Dropdown button
-        </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <div class="dropdown-item" href="#">Action</div>
-        </div>
-      </div>
-      
-      <div id="chosen"></div>
-      <div id="forgeViewer2" class=""></div>
+  <section class="banner">
+    <header>
+        <div class="toggle"></div>
+        <a href="#" class="logo"><img src="" alt=""></a>
+    </header>
+    <div class="contentN">
+        <img src="Name.png" class="textimg" alt="">
+        <p>Подберите подходящий хот-энд для ваших целей используя наш конфигуратор. Также используя всплывающие подсказки ознакомьтесь с техническими характеристиками, особенностями, и преимуществами каждого изделия</p>
+        <a href="http://localhost:3000/forge-viewer.html?hotend=true" class="btn-noStrap"> <ion-icon name="enter-outline"></ion-icon>e3dv6</a><br>
+        <a href="http://localhost:3000/forge-viewer.html?hotend=false"  class="btn-noStrap" > <ion-icon name="enter-outline"></ion-icon>e3d volcano</a>
     </div>
-    <div class="col-sm-12 fill">
-      <div id="forgeViewer"></div>
-    </div>
+</section>
+<ul class="navigation">
+    <li><a href="#">Главная</a></li>
+    <li><a href="https://forums.autodesk.com/">Autodesk Forum</a></li>
+    <li><a href="https://forge.autodesk.com/">Autodesk Forge</a></li>
+    <li><a href="https://new.mospolytech.ru/">Московский Политех</a></li>
+    <li><a href="/about/about.html">Контакты</a></li>
+    <!-- <li><a href="about.html"> </a>    </li> -->
+</ul>
 
-  </div>
-  </div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+let menuToggle = document.querySelector('.toggle');
+let navigation = document.querySelector('.navigation');
+
+menuToggle.onclick = function(){
+    menuToggle.classList.toggle('active');
+    navigation.classList.toggle('active');
+}
+
+</script>
+
 
 </body>
-
 </html>
