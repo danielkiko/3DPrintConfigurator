@@ -2,7 +2,19 @@ var viewer;
 var documentId;
 var hotend = true;
 
-launchViewer()
+launchViewer();
+
+
+
+// function change123() {
+//   hotend = true;
+//   console.log(hotend);
+//   alert("1");
+  
+// }
+
+
+
 function launchViewer() {
   var options = {
     env: 'AutodeskProduction',
@@ -10,12 +22,24 @@ function launchViewer() {
   };
 
 
-
   Autodesk.Viewing.Initializer(options, () => {
+    var someStr = location.search.split("hotend=");
+    
+    if(someStr.length==2 && someStr[1]=="false")
+    {
+      hotend=false;
+    }
+
+    if (hotend) {
+      documentId = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6aG90ZW5kL0UzRF9WNl9Ib3RlbmRfMV83NW1tX3VuaXZlcnNhbC4xMTVjNTgzNS1iMDUzLTRlY2MtOGVhZC1mNmEzYTQxYmRmYmUuZjNkJTIwdjUuZjNk';
+    }
+    else {
+      documentId = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6aG90ZW5kL19FM0RfVjZfVk9MQ0FOT19Ib3RlbmRfMV83NW1tLmJmYTdlZTgzLTcxMjktNDgwNy05NDdiLTBlNDJkYzQxNzRiYy5mM2QlMjB2Ni5mM2Q';//'вулкан';
+    }
+    // console.log(secondnozle);//'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6M2RwcmludGJ1Y2svRW5kZXIlMjAzJTIwJTIwZW4lMjAzZC5mM2QlMjB2MS5mM2Q';
     viewer = new Autodesk.Viewing.GuiViewer3D(document.getElementById('forgeViewer'), { extensions: ['Autodesk.DocumentBrowser'] });
     viewer.start();
-    documentId = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6aG90ZW5kL0UzRF9WNl9Ib3RlbmRfMV83NW1tX3VuaXZlcnNhbC4xMTVjNTgzNS1iMDUzLTRlY2MtOGVhZC1mNmEzYTQxYmRmYmUuZjNkJTIwdjUuZjNk'
-    // console.log(secondnozle);//'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6M2RwcmludGJ1Y2svRW5kZXIlMjAzJTIwJTIwZW4lMjAzZC5mM2QlMjB2MS5mM2Q';
+   
     Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
     
   });
@@ -64,7 +88,7 @@ function Changeurn() {
     documentId = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6aG90ZW5kL0UzRF9WNl9Ib3RlbmRfMV83NW1tX3VuaXZlcnNhbC4xMTVjNTgzNS1iMDUzLTRlY2MtOGVhZC1mNmEzYTQxYmRmYmUuZjNkJTIwdjUuZjNk';
     Autodesk.Viewing.Document.load(documentId, onDocumentLoadSuccess, onDocumentLoadFailure);
     document.getElementById("change").innerHTML = "Поменять на хотэнд";
-    hotend = false;
+    // hotend = false;
   }
   else {
     documentId = 'urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6aG90ZW5kL19FM0RfVjZfVk9MQ0FOT19Ib3RlbmRfMV83NW1tLmJmYTdlZTgzLTcxMjktNDgwNy05NDdiLTBlNDJkYzQxNzRiYy5mM2QlMjB2Ni5mM2Q';//'вулкан';
@@ -72,3 +96,4 @@ function Changeurn() {
     document.getElementById("change").innerHTML = "Поменять на принтер";
   }
 }
+

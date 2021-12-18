@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофигуратор хот-эндов</title>
+    <link rel="stylesheet"  href="css/home-page.css">
+    <script src="js/ForgeViewer.js"></script>
+</head>
+<body>
+  <section class="banner">
+    <header>
+        <div class="toggle"></div>
+        <a href="#" class="logo"><img src="" alt=""></a>
+    </header>
+    <div class="contentN">
+        <img src="Name.png" class="textimg" alt="">
+        <p>Подберите подходящий хот-энд для ваших целей используя наш конфигуратор. Также используя всплывающие подсказки ознакомьтесь с техническими характеристиками, особенностями, и преимуществами каждого изделия</p>
+        <a href="http://localhost:3000?hotend=true" class="btn-noStrap"> <ion-icon name="enter-outline"></ion-icon>e3dv6</a><br>
+        <a href="http://localhost:3000?hotend=false"  class="btn-noStrap" > <ion-icon name="enter-outline"></ion-icon>e3d volcano</a>
+    </div>
+</section>
+<ul class="navigation">
+    <li><a href="#">Главная</a></li>
+    <li><a href="https://forums.autodesk.com/">Autodesk Forum</a></li>
+    <li><a href="https://forge.autodesk.com/">Autodesk Forge</a></li>
+    <li><a href="https://new.mospolytech.ru/">Московский Политех</a></li>
+    <li><a href="about.html">Контакты</a></li>
+    <!-- <li><a href="about.html"> </a>    </li> -->
+</ul>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+let menuToggle = document.querySelector('.toggle');
+let navigation = document.querySelector('.navigation');
+
+menuToggle.onclick = function(){
+    menuToggle.classList.toggle('active');
+    navigation.classList.toggle('active');
+}
+
+</script>
+
+
+</body>
+</html>
